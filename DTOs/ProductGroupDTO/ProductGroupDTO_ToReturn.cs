@@ -6,6 +6,7 @@ namespace smileshop_api.DTOs.ProductGroupDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string IconName { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }

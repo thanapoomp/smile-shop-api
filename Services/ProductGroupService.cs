@@ -23,7 +23,8 @@ namespace smileshop_api.Services
         private readonly ILogger<ProductGroupService> _logger;
         private readonly IHttpContextAccessor _httpContext;
 
-        public ProductGroupService(AppDBContext context, IMapper mapper, ILogger<ProductGroupService> logger, IHttpContextAccessor httpContext) : base(context, mapper, httpContext)
+        public ProductGroupService(AppDBContext context, IMapper mapper, ILogger<ProductGroupService> logger, IHttpContextAccessor httpContext) 
+        : base(context, mapper, httpContext)
         {
             this._context = context;
             this._mapper = mapper;
@@ -38,10 +39,11 @@ namespace smileshop_api.Services
             {
                 var productGroupToAdd = new ProductGroup();
                 productGroupToAdd.Name = input.Name;
+                productGroupToAdd.IconName = input.IconName;
                 productGroupToAdd.CreatedBy = GetUsername();
-                productGroupToAdd.CreatedDate = DateTime.Now;
+                productGroupToAdd.CreatedDate = Now();
                 productGroupToAdd.UpdatedBy = GetUsername();
-                productGroupToAdd.UpdatedDate = DateTime.Now;
+                productGroupToAdd.UpdatedDate = Now();
                 productGroupToAdd.IsActive = true;
                 await _context.ProductGroups.AddAsync(productGroupToAdd);
                 await _context.SaveChangesAsync();
@@ -66,7 +68,7 @@ namespace smileshop_api.Services
                 }
 
                 productGroupToDelete.IsActive = false;
-                productGroupToDelete.UpdatedDate = DateTime.Now;
+                productGroupToDelete.UpdatedDate = Now();
                 productGroupToDelete.UpdatedBy = GetUsername();
                 _context.Update(productGroupToDelete);
                 await _context.SaveChangesAsync();
@@ -93,8 +95,9 @@ namespace smileshop_api.Services
                 }
 
                 productGroup.Name = input.Name;
+                productGroup.IconName = input.IconName;
                 productGroup.UpdatedBy = GetUsername();
-                productGroup.UpdatedDate = DateTime.Now;
+                productGroup.UpdatedDate = Now();
 
                 _context.Update(productGroup);
                 await _context.SaveChangesAsync();
