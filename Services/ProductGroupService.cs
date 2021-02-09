@@ -53,6 +53,7 @@ namespace smileshop_api.Services
             }
             catch (System.Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return ResponseResult.Failure<ProductGroupDTO_ToReturn>(ex.Message);
             }
         }
@@ -64,7 +65,9 @@ namespace smileshop_api.Services
                 var productGroupToDelete = await GetActiveProductGroupById(id);
                 if (productGroupToDelete is null)
                 {
-                    return ResponseResult.Failure<ProductGroupDTO_ToReturn>($"ProductGroup id:{id} not found");
+                    var logMsg = $"ProductGroup id:{id} not found";
+                    _logger.LogWarning(logMsg);
+                    return ResponseResult.Failure<ProductGroupDTO_ToReturn>(logMsg);
                 }
 
                 productGroupToDelete.IsActive = false;
@@ -79,8 +82,8 @@ namespace smileshop_api.Services
             }
             catch (System.Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return ResponseResult.Failure<ProductGroupDTO_ToReturn>(ex.Message);
-                throw;
             }
         }
 
@@ -91,7 +94,9 @@ namespace smileshop_api.Services
             {
                 if (productGroup is null)
                 {
-                    return ResponseResult.Failure<ProductGroupDTO_ToReturn>($"ProductGroup id:{id} not found");
+                    var logMsg = $"ProductGroup id:{id} not found";
+                    _logger.LogWarning(logMsg);
+                    return ResponseResult.Failure<ProductGroupDTO_ToReturn>(logMsg);
                 }
 
                 productGroup.Name = input.Name;
@@ -107,8 +112,8 @@ namespace smileshop_api.Services
             }
             catch (System.Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return ResponseResult.Failure<ProductGroupDTO_ToReturn>(ex.Message);
-                throw;
             }
         }
 
@@ -141,8 +146,8 @@ namespace smileshop_api.Services
             }
             catch (System.Exception ex)
             {
+                _logger.LogError(ex.Message);
                 return ResponseResult.Failure<ProductGroupDTO_ToReturn>(ex.Message);
-                throw;
             }
         }
 
@@ -163,9 +168,10 @@ namespace smileshop_api.Services
                 {
                     queryable = queryable.OrderBy($"{input.OrderingField} {(input.AscendingOrder ? "asc" : "desc")}");
                 }
-                catch (System.Exception)
+                catch (System.Exception ex)
                 {
-                    return ResponseResultWithPagination.Failure<List<ProductGroupDTO_ToReturn>>($"Ordering field name:{input.OrderingField} not found");
+                    _logger.LogError(ex.Message);
+                    return ResponseResultWithPagination.Failure<List<ProductGroupDTO_ToReturn>>(ex.Message);
                 }
             }
 
@@ -178,7 +184,7 @@ namespace smileshop_api.Services
             return ResponseResultWithPagination.Success(dto, paginationResult);
         }
 
-        private async Task<ProductGroup> GetActiveProductGroupById(int id)
+        public async Task<ProductGroup> GetActiveProductGroupById(int id)
         {
             return await _context.ProductGroups.Where(x => x.Id == id && x.IsActive == true).FirstOrDefaultAsync();
         }

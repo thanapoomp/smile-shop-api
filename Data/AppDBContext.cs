@@ -41,5 +41,7 @@ namespace SmileShopAPI.Data
         public DbSet<UserRole> UserRoles { get; set; }
 
         public DbSet<ProductGroup> ProductGroups { get; set; }
+
+        public DbSet<Product> Products { get; set; }
     }
 }

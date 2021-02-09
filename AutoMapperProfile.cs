@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using smileshop_api.DTOs.ProductDTO;
 using smileshop_api.DTOs.ProductGroupDTO;
 using smileshop_api.Models;
 using SmileShopAPI.DTOs;
@@ -23,6 +24,8 @@ namespace SmileShopAPI
             CreateMap<UserRole, UserRoleDto>();
 
             CreateMap<ProductGroup,ProductGroupDTO_ToReturn>().ReverseMap();
+
+            CreateMap<Product,ProductDTO_ToReturn>().ReverseMap();
         }
     }
 }

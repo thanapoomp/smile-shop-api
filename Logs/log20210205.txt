@@ -1,1 +1,28 @@
 2021-02-05 09:57:33.866 +07:00 [INF] Starting web host
+2021-02-05 11:22:35.548 +07:00 [INF] Starting web host
+2021-02-05 14:53:35.652 +07:00 [INF] Starting web host
+2021-02-05 14:53:35.762 +07:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: smileshop_api.Services.IProductService Lifetime: Scoped ImplementationType: smileshop_api.Services.ProductService': Unable to resolve service for type 'smileshop_api.Services.ProductGroupService' while attempting to activate 'smileshop_api.Services.ProductService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: smileshop_api.Services.IProductService Lifetime: Scoped ImplementationType: smileshop_api.Services.ProductService': Unable to resolve service for type 'smileshop_api.Services.ProductGroupService' while attempting to activate 'smileshop_api.Services.ProductService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'smileshop_api.Services.ProductGroupService' while attempting to activate 'smileshop_api.Services.ProductService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at SmileShopAPI.Program.Main(String[] args) in D:\React-StandardDesign\SmileShop\smileshop-api\Program.cs:line 28
+2021-02-05 14:56:29.091 +07:00 [INF] Starting web host
+2021-02-05 16:26:26.172 +07:00 [INF] Starting web host
+2021-02-05 16:27:19.890 +07:00 [INF] Starting web host
+2021-02-05 16:28:10.231 +07:00 [ERR] product group id: 0 not found
+2021-02-05 16:30:29.303 +07:00 [INF] Starting web host

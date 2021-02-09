@@ -83,6 +83,7 @@ namespace SmileShopAPI
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IProductGroupService, ProductGroupService>();
+            services.AddScoped<IProductService, ProductService>();
             //------End: Service------
 
             AddFormatters(services);
