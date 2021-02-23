@@ -1,0 +1,68 @@
+2021-02-23 09:32:39.219 +07:00 [INF] Starting web host
+2021-02-23 09:42:12.268 +07:00 [INF] Starting web host
+2021-02-23 09:42:22.993 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - smileshop_api.Controllers.EmployeesController.AddEmployee (SmileShopAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-02-23 09:42:27.304 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - smileshop_api.Controllers.EmployeesController.AddEmployee (SmileShopAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-02-23 09:44:32.000 +07:00 [INF] Starting web host
+2021-02-23 09:45:05.236 +07:00 [INF] Starting web host
+2021-02-23 09:52:54.211 +07:00 [INF] Starting web host
+2021-02-23 09:57:38.227 +07:00 [INF] Starting web host
+2021-02-23 09:57:57.982 +07:00 [INF] Starting web host
+2021-02-23 13:12:59.230 +07:00 [INF] Starting web host
+2021-02-23 13:24:37.810 +07:00 [INF] Starting web host
+2021-02-23 13:42:29.936 +07:00 [INF] Starting web host
+2021-02-23 13:51:00.639 +07:00 [INF] Starting web host
+2021-02-23 13:51:30.335 +07:00 [ERR] Could not find a part of the path 'D:\React-StandardDesign\SmileShop\smileshop-api\Images\ดอกเบี้ยบ้าน.jpg'.
+2021-02-23 13:51:42.307 +07:00 [ERR] Could not find a part of the path 'D:\React-StandardDesign\SmileShop\smileshop-api\Images\ดอกเบี้ยบ้าน.jpg'.
+2021-02-23 13:52:35.350 +07:00 [ERR] Could not find a part of the path 'D:\React-StandardDesign\SmileShop\smileshop-api\Images\ดอกเบี้ยบ้าน.jpg'.
+2021-02-23 13:53:18.796 +07:00 [ERR] Could not find a part of the path 'D:\React-StandardDesign\SmileShop\smileshop-api\Images\ดอกเบี้ยบ้าน.jpg'.
+2021-02-23 14:02:23.177 +07:00 [INF] Starting web host
+2021-02-23 14:05:52.082 +07:00 [INF] Starting web host
+2021-02-23 14:06:07.964 +07:00 [FTL] Application startup exception
+System.IO.DirectoryNotFoundException: D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Images\
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root)
+   at SmileShopAPI.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in D:\React-StandardDesign\SmileShop\smileshop-api\Startup.cs:line 126
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-02-23 14:06:08.011 +07:00 [FTL] Host terminated unexpectedly
+System.IO.DirectoryNotFoundException: D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Images\
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root)
+   at SmileShopAPI.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in D:\React-StandardDesign\SmileShop\smileshop-api\Startup.cs:line 126
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at SmileShopAPI.Program.Main(String[] args) in D:\React-StandardDesign\SmileShop\smileshop-api\Program.cs:line 28
+2021-02-23 14:06:19.626 +07:00 [INF] Starting web host
+2021-02-23 14:07:23.797 +07:00 [INF] Starting web host
+2021-02-23 14:15:02.206 +07:00 [INF] Starting web host
+2021-02-23 14:15:34.071 +07:00 [INF] Starting web host
+2021-02-23 14:17:42.514 +07:00 [INF] Starting web host
+2021-02-23 14:32:27.054 +07:00 [ERR] Object reference not set to an instance of an object.

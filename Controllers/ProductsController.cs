@@ -54,6 +54,12 @@ namespace smileshop_api.Controllers
             return Ok(await _service.GetProductById(id));
         }
 
+        [HttpGet("ByProductGroupId/{id}")]
+        public async Task<IActionResult> GetByProductGroupId(int id)
+        {
+            return Ok(await _service.GetByProductGroupId(id));
+        }
+
         [HttpGet("Filter")]
         public async Task<IActionResult> GetFilter([FromQuery]ProductDTO_Filter input)
         {

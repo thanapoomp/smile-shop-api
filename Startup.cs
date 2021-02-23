@@ -22,6 +22,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using smileshop_api.Services;
+using System.IO;
+using System.Reflection;
+using Microsoft.Extensions.FileProviders;
 
 namespace SmileShopAPI
 {
@@ -84,6 +87,8 @@ namespace SmileShopAPI
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IProductGroupService, ProductGroupService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IStockEditLogService, StockEditLogService>();
+            services.AddScoped<IEmployeeService,EmployeeService>();
             //------End: Service------
 
             AddFormatters(services);
@@ -112,6 +117,18 @@ namespace SmileShopAPI
             app.UseResponseCaching();
 
             app.UseAuthentication();
+
+            //Use Static files
+            // get the directory
+            var assemblyDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var assetDirectory = Path.Combine(assemblyDirectory, "Images");
+            // use it
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(assetDirectory),
+                RequestPath = "/Images"
+            });
+            //end static files
 
             app.UseAuthorization();
 

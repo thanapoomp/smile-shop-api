@@ -9,6 +9,7 @@ namespace smileshop_api.Services
     {
         Task<ServiceResponse<List<ProductDTO_ToReturn>>> GetAllProducts();
         Task<ServiceResponse<List<ProductDTO_ToReturn>>> GetActiveProducts();
+        Task<ServiceResponse<List<ProductDTO_ToReturn>>> GetByProductGroupId(int productGroupId);
         Task<ServiceResponse<ProductDTO_ToReturn>> AddProduct(ProductDTO_ToAdd input);
         Task<ServiceResponse<ProductDTO_ToReturn>> EditProduct(ProductDTO_ToAdd input, int id);
         Task<ServiceResponse<ProductDTO_ToReturn>> DeleteProduct(int id);

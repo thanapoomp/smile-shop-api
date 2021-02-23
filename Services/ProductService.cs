@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using smileshop_api.DTOs.ProductDTO;
-using smileshop_api.DTOs.ProductGroupDTO;
 using smileshop_api.Models;
 using SmileShopAPI.Data;
 using SmileShopAPI.Models;
@@ -170,6 +169,23 @@ namespace smileshop_api.Services
                 var result = await _context.Products
                 .Include(x => x.ProductGroup)
                 .ToListAsync();
+
+                var dto = _mapper.Map<List<ProductDTO_ToReturn>>(result);
+                return ResponseResult.Success<List<ProductDTO_ToReturn>>(dto);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return ResponseResult.Failure<List<ProductDTO_ToReturn>>(ex.Message);
+            }
+        }
+
+        public async Task<ServiceResponse<List<ProductDTO_ToReturn>>> GetByProductGroupId(int productGroupId)
+        {
+            try
+            {
+                //validate exsist product
+                var result = await _context.Products.Where(x => x.ProductGroupId == productGroupId && x.IsActive == true).ToListAsync();
 
                 var dto = _mapper.Map<List<ProductDTO_ToReturn>>(result);
                 return ResponseResult.Success<List<ProductDTO_ToReturn>>(dto);

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace smileshop_api.Models
 {
@@ -11,6 +12,7 @@ namespace smileshop_api.Models
         public string ImageUrl { get; set; }
         public int ProductGroupId { get; set; }
         public ProductGroup ProductGroup { get; set; }
+        public List<StockEditLog> StockEditLog { get; set; }
         public bool IsActive { get; set; } = false;
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }

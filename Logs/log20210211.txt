@@ -1,0 +1,14 @@
+2021-02-11 12:33:25.870 +07:00 [INF] Starting web host
+2021-02-11 12:34:25.775 +07:00 [INF] Starting web host
+2021-02-11 13:10:22.520 +07:00 [ERR] Product id:10 not found
+2021-02-11 13:12:27.534 +07:00 [INF] Starting web host
+2021-02-11 13:13:22.192 +07:00 [INF] Starting web host
+2021-02-11 13:19:39.470 +07:00 [INF] Starting web host
+2021-02-11 13:19:59.463 +07:00 [ERR] Invalid amount number input
+2021-02-11 13:23:34.270 +07:00 [INF] Starting web host
+2021-02-11 13:24:10.380 +07:00 [INF] Starting web host
+2021-02-11 14:02:33.499 +07:00 [INF] Starting web host
+2021-02-11 14:28:00.832 +07:00 [INF] Starting web host
+2021-02-11 14:28:50.877 +07:00 [INF] Starting web host
+2021-02-11 15:07:55.734 +07:00 [INF] Starting web host
+2021-02-11 20:24:43.859 +07:00 [INF] Starting web host

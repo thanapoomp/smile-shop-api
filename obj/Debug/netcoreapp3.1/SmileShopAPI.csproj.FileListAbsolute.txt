@@ -97,3 +97,4 @@ D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\staticwe
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.dll
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.pdb
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.genruntimeconfig.cache
+D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Images\ดอกเบี้ยบ้าน.jpg

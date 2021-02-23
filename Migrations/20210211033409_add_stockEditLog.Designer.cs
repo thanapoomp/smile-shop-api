@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmileShopAPI.Data;
 
 namespace SmileShopAPI.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210211033409_add_stockEditLog")]
+    partial class add_stockEditLog
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,22 +39,22 @@ namespace SmileShopAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9cf68386-f751-4253-97ca-0bfd80bf05a8"),
+                            Id = new Guid("bb02b1c3-ff4b-42e4-a034-a560a7cdb6f4"),
                             Name = "user"
                         },
                         new
                         {
-                            Id = new Guid("1566762e-f18b-4a95-af56-9dda27385fd3"),
+                            Id = new Guid("7b4e1168-f374-44f4-bf97-4b74fb296655"),
                             Name = "Manager"
                         },
                         new
                         {
-                            Id = new Guid("69c6a9fa-d4f1-47e5-ae7c-c0f536e496d8"),
+                            Id = new Guid("3e249c9b-7962-43db-a3a7-f1d3a6d1e98d"),
                             Name = "Admin"
                         },
                         new
                         {
-                            Id = new Guid("6f0bdda1-c44b-48bd-9fda-2b4d2a47a332"),
+                            Id = new Guid("4957d07c-87f9-4cba-aff2-1a2221678c94"),
                             Name = "Developer"
                         });
                 });
@@ -94,27 +96,6 @@ namespace SmileShopAPI.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("UserRole","auth");
-                });
-
-            modelBuilder.Entity("smileshop_api.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Occupation")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("smileshop_api.Models.Product", b =>
@@ -227,8 +208,6 @@ namespace SmileShopAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
-
                     b.ToTable("StockEditLog");
                 });
 
@@ -252,15 +231,6 @@ namespace SmileShopAPI.Migrations
                     b.HasOne("smileshop_api.Models.ProductGroup", "ProductGroup")
                         .WithMany("Products")
                         .HasForeignKey("ProductGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("smileshop_api.Models.StockEditLog", b =>
-                {
-                    b.HasOne("smileshop_api.Models.Product", "Product")
-                        .WithMany("StockEditLog")
-                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
