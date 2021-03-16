@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using smileshop_api.DTOs.EmployeeDTO;
+using smileshop_api.DTOs.OrderDTO;
 using smileshop_api.DTOs.ProductDTO;
 using smileshop_api.DTOs.ProductGroupDTO;
 using smileshop_api.DTOs.StockEditLogDTO;
@@ -32,6 +33,10 @@ namespace SmileShopAPI
             CreateMap<StockEditLog,StockEditLogDTO_ToReturn>().ReverseMap();
 
             CreateMap<Employee,EmployeeDTO_ToReturn>().ReverseMap();
+
+            CreateMap<Order,OrderDTO_ToReturn>().ReverseMap();
+
+            CreateMap<OrderDetail,OrderDetailDTO_ToReturn>().ReverseMap();
         }
     }
 }

@@ -1,6 +1,7 @@
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\appsettings.json
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Images\ดอกเบี้ยบ้าน.jpg
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\SmileShopAPI.exe
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\SmileShopAPI.deps.json
 D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\SmileShopAPI.runtimeconfig.json
@@ -97,4 +98,3 @@ D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\staticwe
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.dll
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.pdb
 D:\React-StandardDesign\SmileShop\smileshop-api\obj\Debug\netcoreapp3.1\SmileShopAPI.genruntimeconfig.cache
-D:\React-StandardDesign\SmileShop\smileshop-api\bin\Debug\netcoreapp3.1\Images\ดอกเบี้ยบ้าน.jpg

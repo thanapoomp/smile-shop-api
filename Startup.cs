@@ -89,6 +89,7 @@ namespace SmileShopAPI
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStockEditLogService, StockEditLogService>();
             services.AddScoped<IEmployeeService,EmployeeService>();
+            services.AddScoped<IOrderService,OrderService>();
             //------End: Service------
 
             AddFormatters(services);
